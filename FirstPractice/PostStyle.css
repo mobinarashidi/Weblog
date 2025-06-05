@@ -1,0 +1,147 @@
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 3px;
+}
+/* Reset browser styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* body styling and set background */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("photo/photo.jpg");
+}
+
+/* Header styling */
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 0;
+}
+/* title styling */
+.header-title h1 {
+    margin-top: 2px;
+    justify-content: center;
+    line-height: 1;
+    color: #fff;
+    font-size: 50px;
+    text-shadow: 4px 0 3px rgba(175, 97, 0, 0.87);
+    font-weight: bold;
+}
+
+
+/* Navbar styling */
+.navbar {
+    margin-top: 1em;
+    padding: 0.5em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    opacity: 0.6;
+}
+/* link styling */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+/* set margin between links */
+.navbar li {
+    margin: 0 1em;
+}
+
+.navbar a {
+    text-decoration: none; /* remove line */
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    transition: color 0.3s; /* change color when hover */
+}
+
+.navbar a:hover {
+    color: rgba(175, 97, 0, 1); /* set color when hover */
+}
+/* image styling in the post tags */
+img {
+    width: 390px;
+    height: 160px;
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+}
+/* style post tag that changed to a post-container div tag */
+.post-container {
+    margin: 2px 0;
+    padding: 15px;
+    border-radius: 20px;
+    height: 270px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(175, 97, 0, 0.87);
+    opacity: 0.6;
+}
+/* post title styling */
+.post-title {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: rgba(141, 58, 0, 1);
+}
+/* post content styling */
+.post-text {
+    font-size: 1em;
+    color: #333;
+    text-align: justify;
+    width: 390px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* set Layout */
+.posts {
+    display: grid;
+    grid-template-columns: 0.5fr; /* set post boxes in 1 columns for default */
+    gap: 5px; /* set a 5px space between post boxes */
+}
+
+/* Laptop */
+@media (min-width: 700px) {
+    .posts {
+        grid-template-columns: 0.5fr 0.5fr; /* set post boxes in 2 columns for laptop */
+    }
+}
+/* phone */
+@media (max-width: 500px) {
+    .header-title h1 {
+        font-size: 25px;
+    }
+   .navbar {
+       font-size: 0.75em;
+       padding: 0.35em 0.5em;
+   }
+   .navbar li {
+       margin:0 0.5em;
+   }
+   .post-container {
+       width: 430px;
+       height: 300px;
+       margin-left: 25px;
+   }
+   img {
+     width: 320px;
+
+   }
+   .post-text {
+       width: 320px;
+       margin-left: 35px;
+   }
+}
